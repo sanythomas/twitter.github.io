@@ -14,16 +14,14 @@ body{
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-weight: 100;
+    font-size: 15px;
+    margin-right: 20px;
 
 }
 .sidebarOption .material-symbols-outlined,
 .fa-twitter{
-    padding: 20px;
-}
-.sidebarOption h2{
-    font-weight: 800;
-    font-size: 20px;
-    margin-right: 20px;
+    padding: 15px;
 }
 
 .sidebarOption:hover{
@@ -35,7 +33,7 @@ body{
 
 
 .sidebar-tweet{
-    width:100%;
+    width:200px;
     background-color: var(--twitter-color);
     border:none;
     color: white;
@@ -44,6 +42,9 @@ body{
     height: 50px;
     margin-top: 20px;
     cursor: pointer;
+}
+.sidebar-tweet:hover{
+    background-color: #368cc2;
 }
 
 body{
@@ -56,7 +57,6 @@ body{
 }
 .sidebar{
     border-right: 1px solid var(--twitter-background);
-    flex: 0.2;
     min-width: 250px;
     margin-top: 20px;
     padding-left: 20px;
@@ -69,7 +69,6 @@ body{
 
 }
 .feed{
-    flex: 0.5;
     border-right: 1px solid var(--twitter-background);
     min-width: fit-content;
     overflow-y: scroll;
@@ -80,9 +79,34 @@ body{
     top: 0;
     background-color: white;
     z-index: 100;
-    padding: 15px 20px;
-    border: 2px solid var(--twitter-background);
+    padding: 15px 20px;    
 
+}
+.feed-header-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: content-box;
+    border-bottom: 2px solid var(--twitter-background);
+}
+.feed-header-toph1,
+.feed-header-toph2
+{
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: none;
+    padding: 10px;
+}
+.feed-header-toph1:hover,
+.feed-header-toph2:hover{
+  
+    cursor: pointer;
+    background-color: var(--twitter-background);
+    border-bottom: 4px solid var(--twitter-color);
 }
 .feed-header h2{
     font-size: 20px;
@@ -167,8 +191,8 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-
 }
+
 
 .post-headerSpecial{
     font-weight: 600;
