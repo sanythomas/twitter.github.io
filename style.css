@@ -27,7 +27,6 @@ body{
 .sidebarOption:hover{
     background-color: var(--twitter-background);
     border-radius: 30px;
-    color: var(--twitter-color);
     transition: color 100ms ease-out;
 }
 
@@ -72,7 +71,6 @@ body{
     border-right: 1px solid var(--twitter-background);
     min-width: fit-content;
     overflow-y: scroll;
-
 }
 .feed-header{
     position: sticky;
@@ -92,7 +90,7 @@ body{
     border-bottom: 2px solid var(--twitter-background);
 }
 .feed-header-toph1,
-.feed-header-toph2
+.feed-header-toph2.active
 {
     font-weight: 600;
     display: flex;
@@ -100,21 +98,30 @@ body{
     justify-content: space-around;
     border: none;
     padding: 10px;
+    border-bottom: 4px solid var(--twitter-color);
+
+}
+.feed-header-toph2{
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: none;
+    padding: 10px;
+ 
 }
 .feed-header-toph1:hover,
 .feed-header-toph2:hover{
   
     cursor: pointer;
     background-color: var(--twitter-background);
-    border-bottom: 4px solid var(--twitter-color);
+
 }
 .feed-header h2{
     font-size: 20px;
     font-weight: 800;
 }
-.feed::-webkit-scrollbar{
-    display: none;
-}
+
 
 .feed{
     -ms-overflow-style: none;
@@ -129,7 +136,24 @@ body{
     padding-bottom: 10px;
     border-bottom: 2px solid var(--twitter-background);
     padding-right: 10px;
-   
+    object-fit: contain;
+    max-height:150px ;
+}
+.tweetbox-icons{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.tweetbox-input-icons, .material-symbols-outlined{
+    color: var(--twitter-color);
+    padding: 5px;
+}
+.tweetbox-input-icons:hover{
+    cursor: pointer;
+    background-color: var(--twitter-background);
+    border-radius: 50px;
+
 }
 .tweetBox form{
     display: flex;
@@ -138,20 +162,9 @@ body{
 
 .tweetbox-input{
     display: flex;
-    padding: 20px;
-
+    padding: 10px;
 }
-.tweetbox-input.material-symbols-outlined{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 550px;
-    align-items: center;
-    color: var(--twitter-color);
-    padding-bottom: 10px;
 
-}
 .tweetbox-input input{
     flex:1;
     margin-left: 20px;
@@ -167,9 +180,12 @@ body{
     border-radius: 30px;
     width: 80px;
     height: 40px;
-    margin-top: 20px;
-    margin-left: 550px;
-
+    margin-top: -50px;
+    margin-left: 500px;
+}
+.tweetBox-tweetButton:hover{
+    cursor: pointer;
+    background-color: #368cc2;
 }
 
 .post-avatar img{
@@ -189,10 +205,17 @@ body{
 }
 .post-footer{
     display: flex;
-    justify-content: space-between;
     margin-top: 10px;
 }
-
+.post-footer-icon{
+    padding: 10px;    
+}
+.post-footer-icon:hover{
+    cursor: pointer;
+    background-color: var(--twitter-background);
+    border-radius: 50px;
+    color: black;
+}
 
 .post-headerSpecial{
     font-weight: 600;
@@ -221,13 +244,13 @@ body{
 }
 
 .widgets{
-    flex: 0.3;
+   width: 350px;
 }
 .widgets-input{
     display: flex;
     align-items: center;
     background-color: var(--twitter-background);
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 20px;
